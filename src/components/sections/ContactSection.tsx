@@ -1,16 +1,61 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Globe } from "lucide-react";
+import { Phone, Mail, MapPin, Globe, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection: React.FC = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log("Form submitted");
+    
+    // Create WhatsApp message with form data
+    const whatsappMessage = `
+*Contact Form Submission*
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company}
+Subject: ${formData.subject}
+Message: ${formData.message}
+    `.trim();
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/917229917890?text=${encodedMessage}`;
+    
+    // Show success toast
+    toast({
+      title: "Form submitted successfully!",
+      description: "Redirecting you to WhatsApp...",
+    });
+    
+    // Redirect to WhatsApp after a short delay
+    setTimeout(() => {
+      window.open(whatsappURL, "_blank");
+    }, 1000);
   };
 
   return (
@@ -36,35 +81,67 @@ const ContactSection: React.FC = () => {
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                         Your Name
                       </label>
-                      <Input id="name" placeholder="Enter your name" required />
+                      <Input 
+                        id="name" 
+                        placeholder="Enter your name" 
+                        required 
+                        value={formData.name}
+                        onChange={handleChange}
+                      />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                         Your Email
                       </label>
-                      <Input id="email" type="email" placeholder="Enter your email" required />
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="Enter your email" 
+                        required 
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
                     </div>
                   </div>
                   <div className="mb-4">
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
                       Company Name
                     </label>
-                    <Input id="company" placeholder="Enter your company name" />
+                    <Input 
+                      id="company" 
+                      placeholder="Enter your company name" 
+                      value={formData.company}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className="mb-4">
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                       Subject
                     </label>
-                    <Input id="subject" placeholder="How can we help you?" required />
+                    <Input 
+                      id="subject" 
+                      placeholder="How can we help you?" 
+                      required 
+                      value={formData.subject}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className="mb-4">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Message
                     </label>
-                    <Textarea id="message" placeholder="Your message..." rows={5} required />
+                    <Textarea 
+                      id="message" 
+                      placeholder="Your message..." 
+                      rows={5} 
+                      required 
+                      value={formData.message}
+                      onChange={handleChange}
+                    />
                   </div>
                   <Button type="submit" className="w-full bg-brand-blue hover:bg-brand-blue/90 text-white">
-                    Send Message
+                    <Send className="mr-2" size={18} />
+                    Send Message on WhatsApp
                   </Button>
                 </form>
               </div>
