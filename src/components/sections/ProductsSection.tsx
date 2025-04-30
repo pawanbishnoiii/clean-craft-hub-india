@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { 
@@ -9,7 +8,7 @@ import {
   ShoppingBag, 
   Car, 
   ShoppingCart,
-  WhatsApp,
+  MessageSquare,
   ExternalLink
 } from "lucide-react";
 import Bottle from "@/components/ui/icons/Bottle";
@@ -57,7 +56,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ icon, title, description, ima
         className="w-full"
       >
         <Button variant="outline" className="w-full border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300">
-          <WhatsApp className="mr-2" size={18} />
+          <MessageSquare className="mr-2" size={18} />
           Enquire on WhatsApp
         </Button>
       </a>
@@ -204,7 +203,7 @@ const ProductsSection: React.FC = () => {
               className="w-full md:w-auto"
             >
               <Button variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white w-full">
-                <WhatsApp className="mr-2" size={18} />
+                <MessageSquare className="mr-2" size={18} />
                 Contact on WhatsApp
               </Button>
             </a>
