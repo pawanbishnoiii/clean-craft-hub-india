@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { 
@@ -90,25 +91,25 @@ const ProductsSection: React.FC = () => {
       icon: <Archive size={24} />,
       title: "Detergent Powder",
       description: "High-quality detergent powder that effectively cleans and protects fabrics.",
-      imageSrc: "https://images.unsplash.com/photo-1609587312208-cea54be969e7?q=80&w=600&auto=format&fit=crop"
+      imageSrc: "https://images.unsplash.com/photo-1585251309842-fca49d9aa7dd?q=80&w=600&auto=format&fit=crop"
     },
     {
       icon: <Droplets size={24} />,
       title: "Toilet Cleaner",
       description: "Powerful toilet cleaning solution that removes tough stains and kills germs.",
-      imageSrc: "https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=600&auto=format&fit=crop"
+      imageSrc: "https://images.unsplash.com/photo-1598641795816-a84ac9eac40c?q=80&w=600&auto=format&fit=crop"
     },
     {
       icon: <Archive size={24} />,
       title: "Glass Cleaner",
       description: "Crystal clear glass cleaner that leaves windows and mirrors spotless.",
-      imageSrc: "https://images.unsplash.com/photo-1584813470613-5b1c1cad3d69?q=80&w=600&auto=format&fit=crop"
+      imageSrc: "https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=600&auto=format&fit=crop"
     },
     {
       icon: <Package size={24} />,
       title: "Dishwash Liquid",
       description: "Effective dish cleaning liquid that cuts through grease and food residue.",
-      imageSrc: "https://images.unsplash.com/photo-1583187855471-95ef255a8c8e?q=80&w=600&auto=format&fit=crop"
+      imageSrc: "https://images.unsplash.com/photo-1550963295-019d8a8a61c5?q=80&w=600&auto=format&fit=crop"
     },
     {
       icon: <Bottle size={24} />,
@@ -120,19 +121,19 @@ const ProductsSection: React.FC = () => {
       icon: <Package size={24} />,
       title: "Dishwash Tub",
       description: "Specialized cleaner for dishwashing machines and tubs.",
-      imageSrc: "https://images.unsplash.com/photo-1574616536048-77a2b95ece78?q=80&w=600&auto=format&fit=crop"
+      imageSrc: "https://images.unsplash.com/photo-1585999906323-261bc9747e36?q=80&w=600&auto=format&fit=crop"
     },
     {
       icon: <Car size={24} />,
       title: "Car & Tyre Polish",
       description: "Premium polish solutions for cars and tyres that restore shine and protection.",
-      imageSrc: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=600&auto=format&fit=crop"
+      imageSrc: "https://images.unsplash.com/photo-1600880546939-3f528419d996?q=80&w=600&auto=format&fit=crop"
     },
     {
       icon: <ShoppingBag size={24} />,
       title: "Laundry Wash",
       description: "Specially formulated wash for laundry that removes tough stains.",
-      imageSrc: "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=600&auto=format&fit=crop"
+      imageSrc: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=600&auto=format&fit=crop"
     }
   ];
 
