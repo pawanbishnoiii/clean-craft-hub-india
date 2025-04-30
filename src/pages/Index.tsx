@@ -9,6 +9,7 @@ import ManufacturingSection from "@/components/sections/ManufacturingSection";
 import RawMaterialsSection from "@/components/sections/RawMaterialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ScrollToTop from "@/components/shared/ScrollToTop";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 
 const Index = () => {
   useEffect(() => {
@@ -48,6 +49,7 @@ const Index = () => {
       </main>
       <Footer />
       <ScrollToTop />
+      <WhatsAppButton />
     </div>
   );
 };
