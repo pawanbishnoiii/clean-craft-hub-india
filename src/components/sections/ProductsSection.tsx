@@ -1,7 +1,16 @@
 
 import React, { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Spray, Droplets, Flask, Soap, Bottle, Broom, Car, ShoppingCart } from "lucide-react";
+import { 
+  Archive, 
+  Droplets, 
+  FlaskConical, 
+  Package, 
+  ShoppingBag, 
+  Car, 
+  ShoppingCart 
+} from "lucide-react";
+import Bottle from "@/components/ui/icons/Bottle";
 import { Button } from "@/components/ui/button";
 
 interface ProductCardProps {
@@ -47,7 +56,7 @@ const ProductsSection: React.FC = () => {
 
   const products = [
     {
-      icon: <Spray size={24} />,
+      icon: <Archive size={24} />,
       title: "Detergent Powder",
       description: "High-quality detergent powder that effectively cleans and protects fabrics."
     },
@@ -57,12 +66,12 @@ const ProductsSection: React.FC = () => {
       description: "Powerful toilet cleaning solution that removes tough stains and kills germs."
     },
     {
-      icon: <Spray size={24} />,
+      icon: <Archive size={24} />,
       title: "Glass Cleaner",
       description: "Crystal clear glass cleaner that leaves windows and mirrors spotless."
     },
     {
-      icon: <Soap size={24} />,
+      icon: <Package size={24} />,
       title: "Dishwash Liquid",
       description: "Effective dish cleaning liquid that cuts through grease and food residue."
     },
@@ -72,7 +81,7 @@ const ProductsSection: React.FC = () => {
       description: "Gentle hand wash formula that kills germs while being kind to your skin."
     },
     {
-      icon: <Soap size={24} />,
+      icon: <Package size={24} />,
       title: "Dishwash Tub",
       description: "Specialized cleaner for dishwashing machines and tubs."
     },
@@ -82,7 +91,7 @@ const ProductsSection: React.FC = () => {
       description: "Premium polish solutions for cars and tyres that restore shine and protection."
     },
     {
-      icon: <Broom size={24} />,
+      icon: <ShoppingBag size={24} />,
       title: "Laundry Wash",
       description: "Specially formulated wash for laundry that removes tough stains."
     }

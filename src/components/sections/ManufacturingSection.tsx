@@ -1,8 +1,7 @@
-
 import React, { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Factory, Package, Flask, ShieldCheck, Handshake, TrendingUp } from "lucide-react";
+import { Factory, Package, FlaskConical, ShieldCheck, Handshake, TrendingUp } from "lucide-react";
 
 interface ProcessCardProps {
   icon: React.ReactNode;
@@ -57,7 +56,7 @@ const ManufacturingSection: React.FC = () => {
       step: 1
     },
     {
-      icon: <Flask size={24} />,
+      icon: <FlaskConical size={24} />,
       title: "Formula Development",
       description: "Our experts develop and test product formulations to ensure optimal performance.",
       step: 2
