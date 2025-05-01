@@ -1,8 +1,30 @@
-# Welcome to your Pawan Bishnoi project
 
-## Project info
+# KH Trading Co. - Premium Cleaning Products Manufacturer
 
-Follow these steps:
+## Project Overview
+KH Trading Co. is a leading manufacturer and supplier of premium cleaning products in India. This project is a modern, responsive web application for showcasing their products and services.
+
+## Design & Development
+Designed and developed by **Pawan Bishnoi** (Instagram: [@pawanbishnoiii](https://www.instagram.com/pawanbishnoiii))
+
+## Features
+- Responsive design for all screen sizes
+- Animated UI components for better user engagement
+- Product showcase with detailed information
+- Manufacturing process information
+- Contact form with WhatsApp integration
+- Raw materials information
+
+## Technologies Used
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## Getting Started
+
+Follow these steps to get started:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
@@ -18,28 +40,5 @@ npm i
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-Read more here:https//instagram.com/bnou 
+## Contact
+- Instagram: [@pawanbishnoiii](https://www.instagram.com/pawanbishnoiii)

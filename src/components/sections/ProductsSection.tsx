@@ -1,6 +1,5 @@
 
 import React, { useEffect } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { 
   Archive, 
   Droplets, 
@@ -9,8 +8,7 @@ import {
   ShoppingBag, 
   Car, 
   ShoppingCart,
-  MessageSquare,
-  ExternalLink
+  MessageSquare
 } from "lucide-react";
 import Bottle from "@/components/ui/icons/Bottle";
 import { Button } from "@/components/ui/button";
@@ -21,49 +19,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-interface ProductCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  imageSrc?: string;
-}
-
-const ProductCard: React.FC<ProductCardProps> = ({ icon, title, description, imageSrc }) => (
-  <Card className="border border-gray-200 hover:border-brand-blue transition-all duration-300 hover:shadow-md group overflow-hidden h-full flex flex-col">
-    {imageSrc && (
-      <div className="relative overflow-hidden h-48">
-        <img 
-          src={imageSrc} 
-          alt={title} 
-          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" 
-        />
-      </div>
-    )}
-    <CardHeader className="pb-3">
-      <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-4 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
-        {icon}
-      </div>
-      <CardTitle className="text-xl">{title}</CardTitle>
-    </CardHeader>
-    <CardContent className="flex-grow">
-      <CardDescription className="text-gray-600">{description}</CardDescription>
-    </CardContent>
-    <CardFooter className="pt-2 pb-4">
-      <a 
-        href={`https://wa.me/917229917890?text=Hello! I'm interested in your ${title} product. Could you provide more information?`} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="w-full"
-      >
-        <Button variant="outline" className="w-full border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300">
-          <MessageSquare className="mr-2" size={18} />
-          Enquire on WhatsApp
-        </Button>
-      </a>
-    </CardFooter>
-  </Card>
-);
+import ProductCard from "@/components/products/ProductCard";
 
 const ProductsSection: React.FC = () => {
   useEffect(() => {
@@ -90,50 +46,42 @@ const ProductsSection: React.FC = () => {
     {
       icon: <Archive size={24} />,
       title: "Detergent Powder",
-      description: "High-quality detergent powder that effectively cleans and protects fabrics.",
-      imageSrc: "/images/products/detergent-powder.jpg"
+      description: "High-quality detergent powder that effectively cleans and protects fabrics."
     },
     {
       icon: <Droplets size={24} />,
       title: "Toilet Cleaner",
-      description: "Powerful toilet cleaning solution that removes tough stains and kills germs.",
-      imageSrc: "/images/products/toilet-cleaner.jpg"
+      description: "Powerful toilet cleaning solution that removes tough stains and kills germs."
     },
     {
       icon: <Archive size={24} />,
       title: "Glass Cleaner",
-      description: "Crystal clear glass cleaner that leaves windows and mirrors spotless.",
-      imageSrc: "/images/products/glass-cleaner.jpg"
+      description: "Crystal clear glass cleaner that leaves windows and mirrors spotless."
     },
     {
       icon: <Package size={24} />,
       title: "Dishwash Liquid",
-      description: "Effective dish cleaning liquid that cuts through grease and food residue.",
-      imageSrc: "/images/products/dishwash-liquid.jpg"
+      description: "Effective dish cleaning liquid that cuts through grease and food residue."
     },
     {
       icon: <Bottle size={24} />,
       title: "Hand Wash",
-      description: "Gentle hand wash formula that kills germs while being kind to your skin.",
-      imageSrc: "/images/products/hand-wash.jpg"
+      description: "Gentle hand wash formula that kills germs while being kind to your skin."
     },
     {
       icon: <Package size={24} />,
       title: "Dishwash Tub",
-      description: "Specialized cleaner for dishwashing machines and tubs.",
-      imageSrc: "/images/products/dishwash-tub.jpg"
+      description: "Specialized cleaner for dishwashing machines and tubs."
     },
     {
       icon: <Car size={24} />,
       title: "Car & Tyre Polish",
-      description: "Premium polish solutions for cars and tyres that restore shine and protection.",
-      imageSrc: "/images/products/car-polish.jpg"
+      description: "Premium polish solutions for cars and tyres that restore shine and protection."
     },
     {
       icon: <ShoppingBag size={24} />,
       title: "Laundry Wash",
-      description: "Specially formulated wash for laundry that removes tough stains.",
-      imageSrc: "/images/products/laundry-wash.jpg"
+      description: "Specially formulated wash for laundry that removes tough stains."
     }
   ];
 
@@ -141,35 +89,41 @@ const ProductsSection: React.FC = () => {
     <section id="products" className="section bg-gray-50 py-20">
       <div className="content-container">
         <div className="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Our Premium <span className="gradient-text">Cleaning Products</span>
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             We manufacture a wide range of high-quality cleaning products using the finest raw materials. Our products are designed to deliver superior cleaning performance.
           </p>
         </div>
 
-        {/* Featured Product Carousel */}
+        {/* Featured Product Carousel with GIF */}
         <div className="mb-16 reveal-on-scroll">
-          <h3 className="text-2xl font-semibold mb-6 text-center">Featured Products</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-center animate-fade-in-up" style={{ animationDelay: "0.6s" }}>Featured Products</h3>
+          <div className="rounded-lg overflow-hidden shadow-xl mb-8 hover:shadow-2xl transition-all duration-500 animate-float">
+            <img 
+              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjZsNWUzdWFhbWxkdTAwa29odGlnOGg3dXJ5NXZqb2ZqOGt1OG5jaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqBbSNxwrSYfkVW/giphy.gif" 
+              alt="Cleaning Products Manufacturing Process" 
+              className="w-full h-auto"
+            />
+          </div>
           <Carousel className="w-full">
             <CarouselContent>
               {products.slice(0, 4).map((product, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
+                  <div className="p-2 animate-fade-in-up" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
                     <ProductCard
                       icon={product.icon}
                       title={product.title}
                       description={product.description}
-                      imageSrc={product.imageSrc}
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
             <div className="hidden md:flex justify-end gap-2 mt-4">
-              <CarouselPrevious className="relative static" />
-              <CarouselNext className="relative static" />
+              <CarouselPrevious className="relative static hover:scale-110 transition-transform duration-300" />
+              <CarouselNext className="relative static hover:scale-110 transition-transform duration-300" />
             </div>
           </Carousel>
         </div>
@@ -185,7 +139,6 @@ const ProductsSection: React.FC = () => {
                 icon={product.icon}
                 title={product.title}
                 description={product.description}
-                imageSrc={product.imageSrc}
               />
             </div>
           ))}
@@ -193,7 +146,7 @@ const ProductsSection: React.FC = () => {
         
         <div className="mt-12 text-center reveal-on-scroll">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-            <Button className="bg-brand-blue hover:bg-brand-blue/90 text-white w-full md:w-auto">
+            <Button className="bg-brand-blue hover:bg-brand-blue/90 text-white w-full md:w-auto transition-all duration-300 hover:scale-105 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <ShoppingCart className="mr-2" size={18} />
               View All Products
             </Button>
@@ -201,16 +154,17 @@ const ProductsSection: React.FC = () => {
               href="https://wa.me/917229917890?text=Hello! I'm interested in your cleaning products. Could you provide more information?" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full md:w-auto"
+              className="w-full md:w-auto animate-fade-in-up"
+              style={{ animationDelay: "0.4s" }}
             >
-              <Button variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white w-full">
+              <Button variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white w-full transition-all duration-300 hover:scale-105">
                 <MessageSquare className="mr-2" size={18} />
                 Contact on WhatsApp
               </Button>
             </a>
           </div>
           
-          <p className="mt-8 text-sm text-gray-500">
+          <p className="mt-8 text-sm text-gray-500 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
             <span className="font-semibold">Low budget options available!</span> - Contact us to discuss your requirements.
           </p>
         </div>

@@ -147,6 +147,33 @@
     }
   }
   
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }
@@ -157,6 +184,20 @@
   
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+  
+  .animate-rotate {
+    animation: rotate 8s linear infinite;
+  }
+  
+  .animate-bounce-custom {
+    animation: bounce 2s ease-in-out infinite;
   }
   
   /* Button hover effects */
@@ -184,5 +225,30 @@
   
   .image-hover-zoom:hover img {
     @apply scale-110;
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg;
+  }
+  
+  /* Text reveal animation */
+  .text-reveal {
+    @apply relative overflow-hidden;
+  }
+  
+  .text-reveal::after {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full bg-white transform translate-x-0;
+    animation: textReveal 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  }
+  
+  @keyframes textReveal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
   }
 }

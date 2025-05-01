@@ -10,9 +10,21 @@ import RawMaterialsSection from "@/components/sections/RawMaterialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
+import { toast } from "@/components/ui/sonner";
 
 const Index = () => {
   useEffect(() => {
+    // Welcome toast
+    setTimeout(() => {
+      toast("Welcome to KH Trading Co.", {
+        description: "Designed by Pawan Bishnoi (@pawanbishnoiii)",
+        action: {
+          label: "Follow",
+          onClick: () => window.open("https://www.instagram.com/pawanbishnoiii", "_blank")
+        },
+      });
+    }, 1500);
+    
     // Scroll reveal animation
     const handleScroll = () => {
       const elements = document.querySelectorAll('.reveal-on-scroll');

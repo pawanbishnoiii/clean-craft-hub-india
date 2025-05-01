@@ -58,18 +58,18 @@ const HeroSection: React.FC = () => {
       </div>
 
       <div className="content-container relative z-20 text-white pt-16">
-        <div className="max-w-3xl mx-auto md:mx-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 reveal-on-scroll">
+        <div className="max-w-3xl mx-auto md:mx-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 reveal-on-scroll animate-pulse-slow">
             Leading Manufacturer of <span className="text-brand-blue">Premium Cleaning Products</span>
           </h1>
-          <p className="text-xl mb-8 text-gray-200 reveal-on-scroll">
+          <p className="text-xl mb-8 text-gray-200 reveal-on-scroll animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
             KH Trading Company delivers high-quality cleaning solutions with third-party manufacturing services. From detergent powders to specialty cleaners, we create products that shine.
           </p>
-          <div className="flex flex-wrap gap-4 reveal-on-scroll">
-            <Button size="lg" className="bg-brand-blue hover:bg-brand-blue/90 text-white">
+          <div className="flex flex-wrap gap-4 reveal-on-scroll animate-fade-in-up" style={{ animationDelay: "0.9s" }}>
+            <Button size="lg" className="bg-brand-blue hover:bg-brand-blue/90 text-white transition-transform hover:scale-105 duration-300">
               Our Products <ChevronRight className="ml-2" size={16} />
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm">
+            <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm transition-transform hover:scale-105 duration-300">
               Request Quote
             </Button>
           </div>
@@ -81,7 +81,7 @@ const HeroSection: React.FC = () => {
           variant="ghost" 
           size="icon" 
           onClick={scrollToNextSection}
-          className="rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm"
+          className="rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110"
         >
           <ArrowDown size={20} />
         </Button>

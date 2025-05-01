@@ -29,37 +29,37 @@ const AboutSection = () => {
       <div className="content-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="lg:pr-10 reveal-on-scroll">
-            <h4 className="text-brand-blue font-medium mb-3">About Our Company</h4>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h4 className="text-brand-blue font-medium mb-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>About Our Company</h4>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               We Manufacture Premium Cleaning Solutions Since 2015
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
               KH Trading Company is a leading manufacturer of cleaning products in India. Founded by Aarif Khan, we have established ourselves as a reliable supplier of high-quality cleaning solutions for both businesses and consumers.
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
               We specialize in manufacturing a wide range of cleaning products including detergent powder, toilet cleaners, glass cleaners, dishwashing liquids, and more. Our commitment to quality and customer satisfaction has made us a preferred choice for third-party manufacturing services.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              <div className="flex items-center">
+              <div className="flex items-center animate-fade-in-up" style={{ animationDelay: "1.0s" }}>
                 <ShieldCheck size={20} className="text-brand-blue mr-2" />
                 <span className="font-medium">Quality Guaranteed</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center animate-fade-in-up" style={{ animationDelay: "1.1s" }}>
                 <Factory size={20} className="text-brand-blue mr-2" />
                 <span className="font-medium">Modern Facilities</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center animate-fade-in-up" style={{ animationDelay: "1.2s" }}>
                 <HandHelping size={20} className="text-brand-blue mr-2" />
                 <span className="font-medium">Expert Support</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center animate-fade-in-up" style={{ animationDelay: "1.3s" }}>
                 <Clock size={20} className="text-brand-blue mr-2" />
                 <span className="font-medium">Timely Delivery</span>
               </div>
             </div>
 
-            <Button className="bg-brand-blue hover:bg-brand-blue/90 text-white">
+            <Button className="bg-brand-blue hover:bg-brand-blue/90 text-white transition-transform hover:scale-105 duration-300 animate-fade-in-up" style={{ animationDelay: "1.4s" }}>
               Learn More About Us
             </Button>
           </div>
@@ -69,11 +69,11 @@ const AboutSection = () => {
             <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-brand-green/10 rounded-full"></div>
             <div className="relative overflow-hidden rounded-xl shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="KH Trading Company Manufacturing Facility" 
-                className="w-full h-auto rounded-xl shadow-lg"
+                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb25ob2FtZnQwazdicGRmbmNqNTBpcWYzNW5pc3BmOXhsenhld3Z3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0ICZh82Ys3S8UZa/giphy.gif" 
+                alt="Cleaning Products Manufacturing" 
+                className="w-full h-auto rounded-xl shadow-lg animate-pulse-slow"
               />
-              <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
+              <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg animate-float">
                 <div className="flex items-center">
                   <Award size={36} className="text-brand-blue mr-3" />
                   <div>

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Mail, Phone, MapPin, Globe, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,7 +20,7 @@ const Footer = () => {
               <a href="#" className="bg-gray-700 hover:bg-brand-blue p-2 rounded-full transition-colors">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="bg-gray-700 hover:bg-brand-blue p-2 rounded-full transition-colors">
+              <a href="https://www.instagram.com/pawanbishnoiii" target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-brand-blue p-2 rounded-full transition-colors">
                 <Instagram size={18} />
               </a>
               <a href="https://www.indiamart.com/k-h-trading-company/" target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-brand-blue p-2 rounded-full transition-colors">
@@ -100,7 +99,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
           <p>© {new Date().getFullYear()} KH Trading Company. All rights reserved.</p>
-          <p className="mt-2 text-xs">Designed and developed with ❤️</p>
+          <p className="mt-2 text-xs">Designed and developed with ❤️ by <a href="https://www.instagram.com/pawanbishnoiii" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:underline">Pawan Bishnoi</a></p>
         </div>
       </div>
     </footer>

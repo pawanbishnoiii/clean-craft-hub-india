@@ -43,10 +43,10 @@ const RawMaterialsSection: React.FC = () => {
     <section id="raw-materials" className="section bg-gray-50 py-20">
       <div className="content-container">
         <div className="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Premium <span className="gradient-text">Raw Materials</span>
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             We use only the highest quality raw materials to ensure superior cleaning performance and consistent product quality. Our ingredient selection process is rigorous to maintain our high standards.
           </p>
         </div>
@@ -58,7 +58,7 @@ const RawMaterialsSection: React.FC = () => {
               className="reveal-on-scroll"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <Card className="h-full hover:border-brand-blue transition-all duration-300">
+              <Card className="h-full hover:border-brand-blue transition-all duration-300 hover:scale-105 hover:shadow-md">
                 <CardContent className="p-4">
                   <h3 className="text-lg font-bold mb-1 text-brand-blue">{material.name}</h3>
                   <p className="text-gray-600 text-sm">{material.description}</p>
@@ -68,14 +68,14 @@ const RawMaterialsSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-white p-8 rounded-xl shadow-lg reveal-on-scroll">
+        <div className="mt-16 bg-white p-8 rounded-xl shadow-lg reveal-on-scroll hover:shadow-xl transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
             <div className="lg:col-span-3">
-              <h3 className="text-2xl font-bold mb-4">Quality Ingredients for Superior Results</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-2xl font-bold mb-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>Quality Ingredients for Superior Results</h3>
+              <p className="text-gray-600 mb-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
                 At KH Trading Company, we believe that the quality of raw materials directly impacts the effectiveness of our cleaning products. We source our ingredients from trusted suppliers who meet our stringent quality standards.
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
                 Our chemical experts carefully select and test each raw material to ensure it meets our specifications before it enters our production process. This commitment to quality ensures that our products deliver consistent, superior cleaning performance every time.
               </p>
             </div>
@@ -84,9 +84,9 @@ const RawMaterialsSection: React.FC = () => {
                 <div className="absolute -top-3 -right-3 w-24 h-24 bg-brand-blue/10 rounded-full"></div>
                 <div className="absolute -bottom-3 -left-3 w-16 h-16 bg-brand-green/10 rounded-full"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                  alt="Raw Materials for Cleaning Products" 
-                  className="w-full h-full object-cover rounded-lg shadow relative z-10"
+                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGxhamR3bm93ajN0aDR1dndnN2JheWI5ajlyM3lsemwzNnl1ZHJ1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYzLLxlJDfYtepy/giphy.gif" 
+                  alt="Chemical Manufacturing Process" 
+                  className="w-full h-full object-cover rounded-lg shadow relative z-10 animate-pulse-slow"
                 />
               </div>
             </div>
